@@ -3,14 +3,31 @@ package com.ednilsonrossi.mscliente.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+@Entity
+@Table(name = "tb_plano")
 public class Plano implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long numeroANS;
+	
 	private String descricao;
 	private Double valorInicial;
+	
+	@Transient
 	private TipoConvenio tipoConvenio;
 
+	private boolean coparticipacao;
+	
 	public Plano() {
 		super();
 	}
@@ -20,7 +37,7 @@ public class Plano implements Serializable{
 		this.numeroANS = numeroANS;
 		this.descricao = descricao;
 		this.valorInicial = valorInicial;
-		this.tipoConvenio = tipoConvenio;
+		setTipoConvenio(tipoConvenio);
 	}
 
 	public Long getNumeroANS() {
@@ -53,6 +70,23 @@ public class Plano implements Serializable{
 
 	public void setTipoConvenio(TipoConvenio tipoConvenio) {
 		this.tipoConvenio = tipoConvenio;
+		this.coparticipacao = false;
+		if(tipoConvenio.getClass().getSimpleName() == Coparticipacao.class.getSimpleName()) {
+			this.coparticipacao = true;
+		}
+	}
+
+	public boolean isCoparticipacao() {
+		return coparticipacao;
+	}
+
+	public void setCoparticipacao(boolean coparticipacao) {
+		this.coparticipacao = coparticipacao;
+		if(this.coparticipacao) {
+			this.tipoConvenio = Coparticipacao.getInstance();
+		}else {
+			this.tipoConvenio = Pleno.getInstante();
+		}
 	}
 
 	@Override
