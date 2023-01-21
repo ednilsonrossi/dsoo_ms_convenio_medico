@@ -39,6 +39,14 @@ public class Plano implements Serializable{
 		this.valorInicial = valorInicial;
 		setTipoConvenio(tipoConvenio);
 	}
+	
+	public Plano(Long numeroANS, String descricao, Double valorInicial, boolean coparticipacao) {
+		super();
+		this.numeroANS = numeroANS;
+		this.descricao = descricao;
+		this.valorInicial = valorInicial;
+		setCoparticipacao(coparticipacao);
+	}
 
 	public Long getNumeroANS() {
 		return numeroANS;
