@@ -14,7 +14,7 @@
 	<name>dsoo-ms-financeiro</name>
 	<description>Microsserviço da área financeira do convênio médico</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
