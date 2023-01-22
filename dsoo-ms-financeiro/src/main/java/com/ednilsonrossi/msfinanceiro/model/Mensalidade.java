@@ -2,6 +2,7 @@ package com.ednilsonrossi.msfinanceiro.model;
 
 import java.io.Serializable;
 
+
 public class Mensalidade implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -11,7 +12,7 @@ public class Mensalidade implements Serializable{
 	private Integer parcelaReferencia;
 	private MensalidadeState mensalidadeState;
 	private Cliente cliente;
-	
+
 	public Mensalidade() {
 		super();
 	}
@@ -21,6 +22,25 @@ public class Mensalidade implements Serializable{
 		this.id = id;
 		this.parcelaReferencia = parcelaReferencia;
 		this.mensalidadeState = mensalidadeState;
+		this.cliente = cliente;
+		setValor();
+	}
+
+	public Mensalidade(MensalidadeDB mensalidadeDB, Cliente cliente) {
+		super();
+		this.id = mensalidadeDB.id;
+		this.parcelaReferencia = mensalidadeDB.parcelaReferencia;
+		switch (mensalidadeDB.mensalidadeEstado) {
+		case 0:
+			setMensalidadeState(Pago.getInstance());
+			break;
+		case 1:
+			setMensalidadeState(NoPrazo.getInstance());
+			break;
+		case 2:
+			setMensalidadeState(Atrasado.getInstance());
+			break;
+		}
 		this.cliente = cliente;
 		setValor();
 	}
@@ -65,4 +85,25 @@ public class Mensalidade implements Serializable{
 		this.cliente = cliente;
 	}
 
+	public MensalidadeDB getMensalidadeDB() {
+		MensalidadeDB obj = new MensalidadeDB();
+		obj.carteirinhaCliente = cliente.getCarteirinha();
+		obj.id = id;
+		obj.parcelaReferencia = parcelaReferencia;
+		obj.valor = valor;
+		if(mensalidadeState instanceof Pago) {
+			obj.mensalidadeEstado = 0;
+		}else {
+			if(mensalidadeState instanceof NoPrazo) {
+				obj.mensalidadeEstado = 1;
+			}else {
+				if(mensalidadeState instanceof Atrasado) {
+					obj.mensalidadeEstado = 2;
+				}else {
+					obj.mensalidadeEstado = -1;
+				}
+			}
+		}
+		return obj;
+	}
 }

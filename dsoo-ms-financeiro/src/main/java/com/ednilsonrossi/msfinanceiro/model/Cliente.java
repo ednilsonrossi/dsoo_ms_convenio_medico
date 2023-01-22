@@ -10,14 +10,14 @@ public class Cliente implements Serializable{
 
 	private Long carteirinha;
 	private String nome;
-	private Integer anosConvenio;	
+	private Integer anosConvenio;
 	private Plano plano;
-	
-	
+
+
 	public Cliente() {
 		super();
 	}
-	
+
 	public Cliente(Long carteirinha, String nome, Integer anosConvenio, Plano plano) {
 		super();
 		this.carteirinha = carteirinha;
@@ -57,7 +57,7 @@ public class Cliente implements Serializable{
 	public void setPlano(Plano plano) {
 		this.plano = plano;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(carteirinha);
@@ -67,9 +67,7 @@ public class Cliente implements Serializable{
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
+		if ((obj == null) || (getClass() != obj.getClass()))
 			return false;
 		Cliente other = (Cliente) obj;
 		return Objects.equals(carteirinha, other.carteirinha);

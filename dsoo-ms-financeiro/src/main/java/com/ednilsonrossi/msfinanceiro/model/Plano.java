@@ -7,12 +7,12 @@ import java.util.Objects;
 public class Plano implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private Long numeroANS;
 	private String descricao;
 	private Double valorInicial;
 	private boolean coparticipacao;
-	
+
 	public Plano() {
 		super();
 	}
@@ -67,14 +67,12 @@ public class Plano implements Serializable{
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
+		if ((obj == null) || (getClass() != obj.getClass()))
 			return false;
 		Plano other = (Plano) obj;
 		return Objects.equals(numeroANS, other.numeroANS);
 	}
-	
-	
+
+
 }
 
