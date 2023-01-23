@@ -26,7 +26,7 @@ public class Mensalidade implements Serializable{
 		setValor();
 	}
 
-	public Mensalidade(MensalidadeDB mensalidadeDB, Cliente cliente) {
+	public Mensalidade(MensalidadeDTO mensalidadeDB, Cliente cliente) {
 		super();
 		this.id = mensalidadeDB.id;
 		this.parcelaReferencia = mensalidadeDB.parcelaReferencia;
@@ -85,8 +85,8 @@ public class Mensalidade implements Serializable{
 		this.cliente = cliente;
 	}
 
-	public MensalidadeDB getMensalidadeDB() {
-		MensalidadeDB obj = new MensalidadeDB();
+	public MensalidadeDTO getMensalidadeDTO() {
+		MensalidadeDTO obj = new MensalidadeDTO();
 		obj.carteirinhaCliente = cliente.getCarteirinha();
 		obj.id = id;
 		obj.parcelaReferencia = parcelaReferencia;

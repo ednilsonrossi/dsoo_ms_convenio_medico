@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_mensalidade")
-public class MensalidadeDB {
+public class MensalidadeDTO {
 
 	public double valor;
 	public int parcelaReferencia;
