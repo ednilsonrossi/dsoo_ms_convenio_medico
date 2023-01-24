@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.ednilsonrossi.msfinanceiro.model.Cliente;
 
 @Component
-@FeignClient(name = "ms-cliente", url = "localhost:8001", path = "/clientes")
+@FeignClient(name = "ms-cliente", path = "/clientes")
 public interface ClienteFeignClient {
 
 	@GetMapping(value = "/{carteirinha}")
