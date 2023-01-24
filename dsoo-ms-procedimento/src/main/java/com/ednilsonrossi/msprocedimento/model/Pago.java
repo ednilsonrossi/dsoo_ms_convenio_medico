@@ -2,7 +2,7 @@ package com.ednilsonrossi.msprocedimento.model;
 
 import java.io.Serializable;
 
-public class Pago implements MensalidadeState, Serializable{
+public class Pago extends MensalidadeState implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private static Pago instance = null;

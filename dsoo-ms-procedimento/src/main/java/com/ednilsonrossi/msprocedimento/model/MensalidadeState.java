@@ -1,5 +1,15 @@
 package com.ednilsonrossi.msprocedimento.model;
 
-public interface MensalidadeState {
+public class MensalidadeState {
+	private int estado;
 
+	public int getEstado() {
+		return estado;
+	}
+
+	public void setEstado(int estado) {
+		this.estado = estado;
+	}
+	
+	
 }

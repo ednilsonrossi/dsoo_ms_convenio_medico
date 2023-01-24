@@ -2,7 +2,7 @@ package com.ednilsonrossi.msprocedimento.model;
 
 import java.io.Serializable;
 
-public class NoPrazo implements MensalidadeState, Serializable{
+public class NoPrazo extends MensalidadeState implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private static NoPrazo instance = null;

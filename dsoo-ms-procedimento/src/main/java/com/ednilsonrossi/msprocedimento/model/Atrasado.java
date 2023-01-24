@@ -2,7 +2,7 @@ package com.ednilsonrossi.msprocedimento.model;
 
 import java.io.Serializable;
 
-public class Atrasado implements MensalidadeState, Serializable{
+public class Atrasado extends MensalidadeState implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private static Atrasado instance = null;

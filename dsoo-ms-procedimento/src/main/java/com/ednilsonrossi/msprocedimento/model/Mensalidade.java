@@ -2,8 +2,7 @@ package com.ednilsonrossi.msprocedimento.model;
 
 import java.io.Serializable;
 
-
-public class Mensalidade implements Serializable{
+public class Mensalidade implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -39,7 +38,8 @@ public class Mensalidade implements Serializable{
 	}
 
 	private void setValor() {
-		valor = cliente.getPlano().getValorInicial() + (cliente.getAnosConvenio() * cliente.getPlano().getValorInicial() * 0.01);
+		valor = cliente.getPlano().getValorInicial()
+				+ (cliente.getAnosConvenio() * cliente.getPlano().getValorInicial() * 0.01);
 	}
 
 	public Integer getParcelaReferencia() {
@@ -51,7 +51,16 @@ public class Mensalidade implements Serializable{
 	}
 
 	public MensalidadeState getMensalidadeState() {
-		return mensalidadeState;
+		switch (mensalidadeState.getEstado()) {
+		case 0:
+			return Pago.getInstance();
+		case 1:
+			return NoPrazo.getInstance();
+		case 2:
+			return Atrasado.getInstance();
+		default:
+			return null;
+		}
 	}
 
 	public void setMensalidadeState(MensalidadeState mensalidadeState) {
