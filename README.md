@@ -20,4 +20,5 @@ A seguir é apresentado o rascunho do diagrama da aplicação monolítica refere
 
 ## Tutorial
 
-
+### Projeto dsoo-ms-cliente
+Esse projeto será responsável por fornecer serviços relacionados à clientes, inclusive com dados do plano de saúde.
