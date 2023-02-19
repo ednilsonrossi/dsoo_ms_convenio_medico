@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ednilsonrossi.msplanos.model.PlanoSaude;
@@ -36,10 +37,12 @@ public class PlanoSaudeResource {
 		return ResponseEntity.ok(plano);
 	}
 	
-	@PostMapping
-	public PlanoSaudeEntity create(@RequestBody PlanoSaudeEntity planoEntity) {
-		//System.out.println("entrei");
-		return repository.save(planoEntity);
+
+//	@PostMapping(value = "/")
+	@RequestMapping(value = "/", method = RequestMethod.POST, headers = "Accept=application/json")
+	public ResponseEntity<PlanoSaudeEntity> create(@RequestBody PlanoSaudeEntity planoEntity) {
+		System.out.println("entrei");
+		return ResponseEntity.ok(repository.save(planoEntity));
 	}
 	
 }
