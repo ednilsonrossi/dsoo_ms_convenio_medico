@@ -1,0 +1,36 @@
+server:
+  port: 8085
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: cliente service
+          uri: lb://ms-cliente/
+          predicates:
+            - Path=/ms-cliente/**
+        - id: financeiro service
+          uri: lb://ms-financeiro
+          predicates:
+            - Path=/ms-financeiro/**
+        - id: procedimento service
+          uri: lb://ms-procedimento
+          predicates:
+             - Path=/ms-procedimento/**
+        - id: planos service
+          uri: lb://ms-plano
+          predicates:
+            - Path=/ms-plano/**
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
