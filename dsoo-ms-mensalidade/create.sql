@@ -1,0 +1,2 @@
+create table tb_mensalidade (carteirinha int8 not null, referencia int8 not null, ano_referencia int4 not null, estado int4 not null, mes_referencia int4 not null, valor float8 not null, primary key (carteirinha, referencia));
+create table tb_mensalidade (carteirinha int8 not null, referencia int8 not null, ano_referencia int4 not null, estado int4 not null, mes_referencia int4 not null, valor float8 not null, primary key (carteirinha, referencia));

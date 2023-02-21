@@ -1,97 +1,73 @@
 package com.ednilsonrossi.mscliente.model;
 
-import java.io.Serializable;
-import java.util.Objects;
-
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
 
 @Entity
 @Table(name = "tb_cliente")
-public class Cliente implements Serializable{
+public class Cliente {
 
-	private static final long serialVersionUID = 1L;
-	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long carteirinha;
-	private String nome;
-	private Integer anosConvenio;	
-	
-	/*
-	 * Conforme diagrama de classes, a navegabilidade se dá no sentido de Cliente para Plano, assim, o mapenamento 
-	 * para o modelo relacional incluí a referência do plano apenas na tabela de clientes, o que justifica o mapeamento
-	 * ManyToOne no JPA. 
-	 */
-	@ManyToOne
-	private Plano plano;
-	
+	private long cardNumber;
+	private String name;
+	private int startYear;
+	private long ansNumber;
+	private double coparticipationValue;
 	
 	public Cliente() {
-		super();
+	
 	}
 	
-	public Cliente(Long carteirinha, String nome, Integer anosConvenio, Plano plano) {
+	public Cliente(Long cardNumber, String name, Integer startYear, Long ansNumber, Double coparticipationValue) {
 		super();
-		this.carteirinha = carteirinha;
-		this.nome = nome;
-		this.anosConvenio = anosConvenio;
-		this.plano = plano;
+		this.cardNumber = cardNumber;
+		this.name = name;
+		this.startYear = startYear;
+		this.ansNumber = ansNumber;
+		this.coparticipationValue = coparticipationValue;
 	}
 
-	public Long getCarteirinha() {
-		return carteirinha;
+	public Long getCardNumber() {
+		return cardNumber;
 	}
 
-	public void setCarteirinha(Long carteirinha) {
-		this.carteirinha = carteirinha;
+	public void setCardNumber(Long cardNumber) {
+		this.cardNumber = cardNumber;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public Integer getAnosConvenio() {
-		return anosConvenio;
+	public Integer getStartYear() {
+		return startYear;
 	}
 
-	public void setAnosConvenio(Integer anosConvenio) {
-		this.anosConvenio = anosConvenio;
+	public void setStartYear(Integer startYear) {
+		this.startYear = startYear;
 	}
 
-	public Plano getPlano() {
-		return plano;
+	public Long getAnsNumber() {
+		return ansNumber;
 	}
 
-	public void setPlano(Plano plano) {
-		this.plano = plano;
+	public void setAnsNumber(Long ansNumber) {
+		this.ansNumber = ansNumber;
+	}
+
+	public Double getCoparticipationValue() {
+		return coparticipationValue;
+	}
+
+	public void setCoparticipationValue(Double coparticipationValue) {
+		this.coparticipationValue = coparticipationValue;
 	}
 	
-	@Override
-	public int hashCode() {
-		return Objects.hash(carteirinha);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Cliente other = (Cliente) obj;
-		return Objects.equals(carteirinha, other.carteirinha);
-	}
-
 }

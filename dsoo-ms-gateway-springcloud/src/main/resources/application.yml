@@ -30,6 +30,15 @@ spring:
           uri: lb://ms-plano
           predicates:
             - Path=/ms-plano/**
+        - id: calcular mensalidade
+          uri: lb://ms-calcular
+          predicates:
+            - Path=/ms-calcular/**
+        - id: gerar mensalidades
+          uri: lb://ms-mensalidade
+          predicates:
+            - Path=/ms-mensalidade/**
+            
       discovery:
         locator:
           enabled: true
