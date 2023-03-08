@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<ns2:softwareSystem xmlns:ns2="http://www.hello2morrow.com/sonargraph/core" id="948a374570b1f87577a7ef3593b4c03c" version="12.5.3.787">
+	<description></description>
+	<module xmlns:ns4="http://www.hello2morrow.com/sonargraph/languageprovider/java" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:xsdJavaModule" name="ms-cliente" id="9f24940e17d35dd00e2669917f50d8ca" language="Java">
+		<description></description>
+		<rootPath xsi:type="ns4:xsdSourceRootPath" name="./dsoo-ms-cliente/src/main/java"></rootPath>
+		<rootPath name="./dsoo-ms-cliente/target/classes"></rootPath>
+		<rootPath name="../../../../../../mnt/arquivos/ednilson/workspace/dsoo_workspace/dsoo_microsservicos_convenio_medico/dsoo-ms-cliente"></rootPath>
+	</module>
+	<module xmlns:ns4="http://www.hello2morrow.com/sonargraph/languageprovider/java" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:xsdJavaModule" name="ms-cliente-manager" id="97035aa94cf9e14177867d68c00b3382" language="Java">
+		<description></description>
+		<rootPath name="../../../../../../mnt/arquivos/ednilson/workspace/dsoo_workspace/dsoo_microsservicos_convenio_medico/dsoo-ms-cliente-manager"></rootPath>
+		<rootPath xsi:type="ns4:xsdSourceRootPath" name="./dsoo-ms-cliente-manager/src/main/java"></rootPath>
+		<rootPath name="./dsoo-ms-cliente-manager/target/classes"></rootPath>
+	</module>
+	<module xmlns:ns4="http://www.hello2morrow.com/sonargraph/languageprovider/java" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:xsdJavaModule" name="ms-eureka-server" id="6652951f2ac8a9ecf490b78c07cf06de" language="Java">
+		<description></description>
+		<rootPath name="../../../../../../mnt/arquivos/ednilson/workspace/dsoo_workspace/dsoo_microsservicos_convenio_medico/dsoo-ms-eureka-server"></rootPath>
+		<rootPath xsi:type="ns4:xsdSourceRootPath" name="./dsoo-ms-eureka-server/src/main/java"></rootPath>
+		<rootPath name="./dsoo-ms-eureka-server/target/classes"></rootPath>
+	</module>
+	<module xmlns:ns4="http://www.hello2morrow.com/sonargraph/languageprovider/java" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:xsdJavaModule" name="ms-financeiro" id="de3ddf8c0717c144193aa277b40197f2" language="Java">
+		<description></description>
+		<rootPath name="../../../../../../mnt/arquivos/ednilson/workspace/dsoo_workspace/dsoo_microsservicos_convenio_medico/dsoo-ms-financeiro"></rootPath>
+		<rootPath xsi:type="ns4:xsdSourceRootPath" name="./dsoo-ms-financeiro/src/main/java"></rootPath>
+		<rootPath name="./dsoo-ms-financeiro/target/classes"></rootPath>
+	</module>
+	<module xmlns:ns4="http://www.hello2morrow.com/sonargraph/languageprovider/java" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:xsdJavaModule" name="ms-gateway-springcloud" id="abda92e6dbb51e8d044acc28effa9eb9" language="Java">
+		<description></description>
+		<rootPath name="../../../../../../mnt/arquivos/ednilson/workspace/dsoo_workspace/dsoo_microsservicos_convenio_medico/dsoo-ms-gateway-springcloud"></rootPath>
+		<rootPath xsi:type="ns4:xsdSourceRootPath" name="./dsoo-ms-gateway-springcloud/src/main/java"></rootPath>
+		<rootPath name="./dsoo-ms-gateway-springcloud/target/classes"></rootPath>
+	</module>
+	<module xmlns:ns4="http://www.hello2morrow.com/sonargraph/languageprovider/java" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:xsdJavaModule" name="ms-mensalidade" id="067f729edd432772ada82566ab194594" language="Java">
+		<description></description>
+		<rootPath name="../../../../../../mnt/arquivos/ednilson/workspace/dsoo_workspace/dsoo_microsservicos_convenio_medico/dsoo-ms-mensalidade"></rootPath>
+		<rootPath name="./dsoo-ms-mensalidade/target/test-classes"></rootPath>
+		<rootPath xsi:type="ns4:xsdSourceRootPath" name="./dsoo-ms-mensalidade/src/main/java"></rootPath>
+	</module>
+	<module xmlns:ns4="http://www.hello2morrow.com/sonargraph/languageprovider/java" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:xsdJavaModule" name="ms-planos" id="c9ba761ff2bbd95c7a72a7e55e9f83d8" language="Java">
+		<description></description>
+		<rootPath name="../../../../../../mnt/arquivos/ednilson/workspace/dsoo_workspace/dsoo_microsservicos_convenio_medico/dsoo-ms-planos"></rootPath>
+		<rootPath xsi:type="ns4:xsdSourceRootPath" name="./dsoo-ms-planos/src/main/java"></rootPath>
+		<rootPath name="./dsoo-ms-planos/target/classes"></rootPath>
+	</module>
+	<module xmlns:ns4="http://www.hello2morrow.com/sonargraph/languageprovider/java" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns4:xsdJavaModule" name="ms-procedimento" id="f7a3f891b3c596f71f7f4fc5a118a20a" language="Java">
+		<description></description>
+		<rootPath name="../../../../../../mnt/arquivos/ednilson/workspace/dsoo_workspace/dsoo_microsservicos_convenio_medico/dsoo-ms-procedimento"></rootPath>
+		<rootPath xsi:type="ns4:xsdSourceRootPath" name="./dsoo-ms-procedimento/src/main/java"></rootPath>
+		<rootPath name="./dsoo-ms-procedimento/target/classes"></rootPath>
+	</module>
+</ns2:softwareSystem>

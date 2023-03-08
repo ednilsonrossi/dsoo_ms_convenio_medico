@@ -1,4 +1,4 @@
-package com.ednilsonrossi.msmensalidade.repositories;
+package com.ednilsonrossi.msmensalidade.model.entities;
 
 import java.io.Serializable;
 

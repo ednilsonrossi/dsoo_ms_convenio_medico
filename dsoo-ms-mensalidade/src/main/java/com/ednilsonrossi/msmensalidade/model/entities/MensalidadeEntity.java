@@ -13,7 +13,6 @@ import com.ednilsonrossi.msmensalidade.model.Cliente;
 import com.ednilsonrossi.msmensalidade.model.IMensalidadeState;
 import com.ednilsonrossi.msmensalidade.model.Mensalidade;
 import com.ednilsonrossi.msmensalidade.model.Paga;
-import com.ednilsonrossi.msmensalidade.repositories.MensalidadeId;
 
 @Entity
 @Table(name = "tb_mensalidade")
