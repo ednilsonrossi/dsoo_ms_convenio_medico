@@ -16,6 +16,7 @@ import com.ednilsonrossi.msmensalidade.model.Aberta;
 import com.ednilsonrossi.msmensalidade.model.Cliente;
 import com.ednilsonrossi.msmensalidade.model.Mensalidade;
 import com.ednilsonrossi.msmensalidade.model.entities.MensalidadeEntity;
+import com.ednilsonrossi.msmensalidade.model.entities.MensalidadeId;
 import com.ednilsonrossi.msmensalidade.repositories.IMensalidadeRepository;
 import com.ednilsonrossi.msmensalidade.services.CalculoMensalidadeService;
 import com.ednilsonrossi.msmensalidade.services.ClienteService;
@@ -62,6 +63,17 @@ public class MensalidadeResource {
 		repository.saveAll(mensalidades);
 		
 		return ResponseEntity.ok(mensalidades);
+	}
+	
+	@GetMapping(value = "/{cliente}/ref/{referencia}")
+	public ResponseEntity<MensalidadeEntity> baixarMensalidade(@PathVariable long cliente, @PathVariable long referencia){
+		
+		MensalidadeEntity mEntity = repository.findById(new MensalidadeId(cliente, referencia)).get();
+		mEntity.setEstado(0);
+		repository.save(mEntity);
+		
+		return ResponseEntity.ok(mEntity);
+		
 	}
 	
 }

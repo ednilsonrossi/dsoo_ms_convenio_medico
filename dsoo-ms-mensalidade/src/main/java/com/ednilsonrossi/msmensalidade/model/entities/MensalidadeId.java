@@ -38,5 +38,7 @@ public class MensalidadeId implements Serializable{
 		this.referencia = referencia;
 	}
 	
-	
+	public static long generateReference(int ano, int mes) {
+		return mes * 10000 + ano;
+	}
 }

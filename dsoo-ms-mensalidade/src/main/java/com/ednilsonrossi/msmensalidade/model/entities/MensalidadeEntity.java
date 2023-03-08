@@ -34,7 +34,7 @@ public class MensalidadeEntity implements Serializable{
 	public MensalidadeEntity(Cliente cliente, Mensalidade mensalidade) {
 		this.mesReferencia = mensalidade.getMesReferencia();
 		this.anoReferencia = mensalidade.getAnoReferencia();
-		this.mensalidadeId = new MensalidadeId(cliente.getCarteirinha(), (this.mesReferencia * 10000 + this.anoReferencia) );
+		this.mensalidadeId = new MensalidadeId(cliente.getCarteirinha(), MensalidadeId.generateReference(this.anoReferencia, this.mesReferencia) );
 		this.valor = mensalidade.getValor();
 		defineEstado(mensalidade.getMensalidadeState());
 	}
