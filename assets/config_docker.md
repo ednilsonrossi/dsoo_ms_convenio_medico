@@ -12,26 +12,26 @@ sudo docker run -p 5432:5432 --name dsoo-msplanos --network dsoo-net -e POSTGRES
 ## VER CONTAINNERS 
 sudo docker ps -a
 
-## REMOVER CONTAINER
+## REMOVER contêiner
 sudo docker -rm af097bfd8882
 
-## INICIAR UM CONTAINER
+## INICIAR UM contêiner
 sudo docker start dsoo-msplanos
 
-## PARAR UM CONTAINER
+## PARAR UM contêiner
 sudo docker stop dsoo-msplanos
 
 ## ACESSAR O PSQL
 sudo docker exec -it dsoo-msplanos psql -U postgres
 
 ## Exemplo 2
-Aqui vamos baixar uma imagem do MySQL e exercutar o container.
+Aqui vamos baixar uma imagem do MySQL e exercutar o contêiner.
 
 ### Baixar a imagem
 sudo docker pull mysql/mysql-server:latest
 
-### Exercutar o container
-Aqui estamos executando o container, definindo a porta e a senha do usuário ROOT
+### Exercutar o contêiner
+Aqui estamos executando o contêiner, definindo a porta e a senha do usuário ROOT
 
 sudo docker run --name mysql-server -e MYSQL_ROOT_PASSWORD=senha -p 3306:3306 -d mysql/mysql-server
 
