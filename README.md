@@ -17,8 +17,13 @@ A seguir é apresentado o rascunho do diagrama da aplicação monolítica refere
 - Java
 - JPA
 
+## Sobre microsserviços
+
+Foi gerado um material introdutório sobre microsserviços. Esse material foi utilizado em apresentação da arquitetura aos alunos do curso de graduação e pode ser acessado no link abaixo.
+
+https://docs.google.com/presentation/d/17Ahu2W9GNdDMFcQ_I5tUU60NuwDbWEkS17LxtOEa-_8/edit?usp=sharing
 
 ## Tutorial
 
-### Projeto dsoo-ms-cliente
-Esse projeto será responsável por fornecer serviços relacionados à clientes, inclusive com dados do plano de saúde.
+
+
